@@ -20,7 +20,7 @@ export const MainPage = () => {
         setLoading(true);
         setError(null); // Clear previous error message, if any
 
-        axios.post("https://hanko-auth-backend.onrender.com", { text_to_summarize: text }, { withCredentials: true })
+        axios.post("https://hanko-auth-backend.onrender.com/summarize", { text_to_summarize: text }, { withCredentials: true })
             .then(res => {
                 console.log('response', JSON.stringify(res.data));
                 setResponse(res.data);
